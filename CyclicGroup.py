@@ -6,7 +6,7 @@ class CyclicGroup:
     def __init__(self, n: int):
         self.__n = n
         self.p = self.__prime_finder()  # Amount of elements
-        self.mod = 2 * self.p + 1  # mod parameter
+        self.mod = 2 * self.p + 1  # modulo parameter
         self.generator = self.__generator_finder()
         self.elements = self.__gen_cyclic_group_elements()
 
