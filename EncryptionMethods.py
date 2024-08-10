@@ -19,13 +19,15 @@ def decrypt(cyclic_group: CyclicGroup, cipher_message: CipherMessage, s_key):
 
 
 def main():
-    group = CyclicGroup(1000)
+    group = CyclicGroup(10)
+    print("size of group:", group.p)
     vote = input("Enter 0 to vote against and 1 to vote for")
     plaintext = pow(group.generator, int(vote), mod=group.mod)
     print("your plaintext is:", plaintext)
     TTP_key = Key(group)
     print("your given key is:", TTP_key.p_key)
     encrypted_message = encrypt(group, plaintext, TTP_key.p_key)
+    print("your public key is:", encrypted_message.p_key)
     print("your encrypted message is:", encrypted_message.ciphertext)
     decrypted_message = decrypt(group, encrypted_message, TTP_key.s_key)
     print("your decrypted message is:", decrypted_message)

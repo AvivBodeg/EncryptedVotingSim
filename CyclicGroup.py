@@ -1,12 +1,15 @@
 import sympy
 import math
+import random
 
 
 class CyclicGroup:
+    SIZE_MULTIPLIER = 10000
+
     def __init__(self, n: int):
         self.__n = n
         self.p = self.__prime_finder()  # Amount of elements
-        self.mod = 2 * self.p + 1  # modulo parameter
+        self.mod = 2 * self.p + 1  # Modulo parameter
         self.generator = self.__generator_finder()
         self.elements = self.__gen_cyclic_group_elements()
 
@@ -14,7 +17,8 @@ class CyclicGroup:
         """Finds a fitting prime number that can create a cyclic group with
         at least 2*n + 1 elements
         """
-        p = sympy.nextprime(2 * self.__n)
+        base = SIZE_MULTIPLIER = 10000  # minimum prime value
+        p = sympy.nextprime(base)
         while not sympy.isprime(2 * p + 1):
             p = sympy.nextprime(p)
         return p
