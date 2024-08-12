@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="22abb86b-3d25-415b-a8c9-6f85560267d5" name="Changes" comment="" />
+    <list default="true" id="22abb86b-3d25-415b-a8c9-6f85560267d5" name="Changes" comment="Cyclic generator set to 4">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CyclicGroup.py" beforeDir="false" afterPath="$PROJECT_DIR$/CyclicGroup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EncryptionMethods.py" beforeDir="false" afterPath="$PROJECT_DIR$/EncryptionMethods.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2kO8C9XYRMUhYsWCgcCUJHZYV1t" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.CyclicGroup.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EncryptionMethods.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -43,7 +64,90 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723143133488</updated>
+      <workItem from="1723143135753" duration="2521000" />
+      <workItem from="1723205832713" duration="598000" />
+      <workItem from="1723227611471" duration="2147000" />
+      <workItem from="1723288121598" duration="2772000" />
+      <workItem from="1723310238142" duration="2194000" />
+      <workItem from="1723472946392" duration="3961000" />
     </task>
+    <task id="LOCAL-00001" summary="CyclicGroup">
+      <option name="closed" value="true" />
+      <created>1723143968680</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723143968680</updated>
+    </task>
+    <task id="LOCAL-00002" summary="CyclicGroup and Key">
+      <option name="closed" value="true" />
+      <created>1723144778436</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723144778436</updated>
+    </task>
+    <task id="LOCAL-00003" summary="encryption/decryption">
+      <option name="closed" value="true" />
+      <created>1723229193209</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723229193209</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CyclicGroup size multiplier">
+      <option name="closed" value="true" />
+      <created>1723290294378</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723290294378</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Cyclic generator set to 4">
+      <option name="closed" value="true" />
+      <created>1723310535729</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723310535729</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CyclicGroup" />
+    <MESSAGE value="CyclicGroup and Key" />
+    <MESSAGE value="encryption/decryption" />
+    <MESSAGE value="CyclicGroup size multiplier" />
+    <MESSAGE value="Cyclic generator set to 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cyclic generator set to 4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/EncryptionMethods.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/EncryptedVotingSim$CyclicGroup.coverage" NAME="CyclicGroup Coverage Results" MODIFIED="1723144611507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EncryptedVotingSim$EncryptionMethods.coverage" NAME="EncryptionMethods Coverage Results" MODIFIED="1723477857807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -11,15 +11,17 @@ def encrypt(cyclic_group: CyclicGroup, plaintext, TTP_key):
     return message
 
 
-def decrypt(cyclic_group: CyclicGroup, cipher_message: CipherMessage, s_key):
+def decrypt_single_msg(cyclic_group: CyclicGroup, cipher_message: CipherMessage, s_key: object) -> object:
     power_canceler = pow(cipher_message.p_key, -s_key, mod=cyclic_group.mod)
     decrypted_message = (cipher_message.ciphertext * power_canceler) % cyclic_group.mod
     return decrypted_message
 
 
 
+
 def main():
     group = CyclicGroup(10)
+    print(group.generator)
     print("size of group:", group.p)
     vote = input("Enter 0 to vote against and 1 to vote for")
     plaintext = pow(group.generator, int(vote), mod=group.mod)
@@ -29,14 +31,15 @@ def main():
     encrypted_message = encrypt(group, plaintext, TTP_key.p_key)
     print("your public key is:", encrypted_message.p_key)
     print("your encrypted message is:", encrypted_message.ciphertext)
-    decrypted_message = decrypt(group, encrypted_message, TTP_key.s_key)
+    decrypted_message = decrypt_single_msg(group, encrypted_message, TTP_key.s_key)
     print("your decrypted message is:", decrypted_message)
     if decrypted_message == group.generator:
         print("you voted for!")
     elif decrypted_message == 1:
-        print("you voted against")
+        print("you voted against!")
     else:
         print("invalid or i fucked up")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
