@@ -3,18 +3,12 @@ from Key import Key
 from CipherMessage import CipherMessage
 
 
-# def encrypt_single_msg(cyclic_group: CyclicGroup, plaintext, TTP_key):
-#     key = Key(cyclic_group)
-#     h = pow(TTP_key, key.s_key, mod=cyclic_group.mod)
-#     ciphertext = (plaintext * h) % cyclic_group.mod
-#     message = CipherMessage(key.p_key, ciphertext)
-#     return message
-#
-#
-# def decrypt_single_msg(cyclic_group: CyclicGroup, cipher_message: CipherMessage, s_key):
-#     power_canceler = pow(cipher_message.p_key, -s_key, mod=cyclic_group.mod)
-#     decrypted_message = (cipher_message.ciphertext * power_canceler) % cyclic_group.mod
-#     return decrypted_message
+def multi_vote_encryption(cyclic_group: CyclicGroup, vote, voting_product: CipherMessage, TTP_key: Key):
+    current_vote = encrypt(cyclic_group, vote, TTP_key)
+    key_product = (voting_product.p_key * current_vote.p_key) % cyclic_group.mod
+    message = (voting_product.ciphertext * current_vote.ciphertext) % cyclic_group.mod
+    new_voting_product: CipherMessage = CipherMessage(key_product, message)
+    return new_voting_product
 
 
 def encrypt(cyclic_group: CyclicGroup, vote, TTP_key: Key):
@@ -24,14 +18,6 @@ def encrypt(cyclic_group: CyclicGroup, vote, TTP_key: Key):
     cipher_message: CipherMessage = CipherMessage(key.p_key, ciphertext)
     print("p_key", cipher_message.p_key, "message:", cipher_message.ciphertext)
     return cipher_message
-
-
-def multi_vote_encryption(cyclic_group: CyclicGroup, vote, voting_product: CipherMessage, TTP_key: Key):
-    current_vote = encrypt(cyclic_group, vote, TTP_key)
-    key_product = (voting_product.p_key * current_vote.p_key) % cyclic_group.mod
-    message = (voting_product.ciphertext * current_vote.ciphertext) % cyclic_group.mod
-    new_voting_product: CipherMessage = CipherMessage(key_product, message)
-    return new_voting_product
 
 
 def multi_vote_decryption(cyclic_group: CyclicGroup, voting_product: CipherMessage, s_key, num_voters):
@@ -45,6 +31,7 @@ def find_voting_result(cyclic_group: CyclicGroup, num_voters, result_as_power):
         if pow(cyclic_group.generator, i, mod=cyclic_group.mod) == result_as_power:
             return i
     return -1
+
 
 def main():
     group = CyclicGroup(10)

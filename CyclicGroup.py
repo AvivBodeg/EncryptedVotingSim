@@ -28,12 +28,3 @@ class CyclicGroup:
         for i in range(self.p):
             cyclic_set.add(pow(self.generator, i, mod=self.mod))
         return cyclic_set
-
-    # def __generator_finder(self):
-    #     """Finds a suitable generator that can generate the cyclic group with
-    #     returns -1 if a generator cannot be found
-    #     """
-    #     for i in range(2, self.mod - 1):
-    #         if math.gcd(i, self.mod - 1) == 1:
-    #     return -1
-    #             return i
