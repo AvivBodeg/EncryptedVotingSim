@@ -1,6 +1,6 @@
-from CyclicGroup import CyclicGroup
-from Key import Key
-from CipherMessage import CipherMessage
+from Objects.CyclicGroup import CyclicGroup
+from Objects.Key import Key
+from Objects.CipherMessage import CipherMessage
 
 
 def multi_vote_encryption(cyclic_group: CyclicGroup, vote, voting_product: CipherMessage, TTP_key: Key):

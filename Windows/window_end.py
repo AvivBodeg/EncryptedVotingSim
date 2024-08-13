@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
-from VoteSettings import VoteSettings
-from QuestionInfo import QuestionInfo
+from Objects.QuestionInfo import QuestionInfo
 
 
 def create_window_end(question_info: QuestionInfo, sum_opt1, sum_opt2):

@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from VoteSettings import VoteSettings
+from Objects.VoteSettings import VoteSettings
 
 
 def create_window_intro():

@@ -1,8 +1,5 @@
 import PySimpleGUI as sg
-import window_intro
-import window_voting
-import window_intermission
-import window_end
+from Windows import window_intro, window_intermission, window_end, window_voting
 
 sg.theme("DarkBlue14")
 

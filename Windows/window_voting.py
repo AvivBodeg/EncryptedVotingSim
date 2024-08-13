@@ -1,7 +1,6 @@
 import PySimpleGUI as sg
 
-from QuestionInfo import QuestionInfo
-from VoteSettings import VoteSettings
+from Objects.QuestionInfo import QuestionInfo
 
 
 def create_window_voting(question_info: QuestionInfo, current_voter):

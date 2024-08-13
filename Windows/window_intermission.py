@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-from VoteSettings import VoteSettings
 
 
 def create_window_intermission(current_voter, ciphertext):
