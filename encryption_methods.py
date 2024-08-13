@@ -1,6 +1,6 @@
-from Objects.CyclicGroup import CyclicGroup
-from Objects.Key import Key
-from Objects.CipherMessage import CipherMessage
+from Objects.cyclic_group import CyclicGroup
+from Objects.key import Key
+from Objects.cipher_message import CipherMessage
 
 
 def multi_vote_encryption(cyclic_group: CyclicGroup, vote, voting_product: CipherMessage, TTP_key: Key):
@@ -33,17 +33,17 @@ def find_voting_result(cyclic_group: CyclicGroup, num_voters, result_as_power):
     return -1
 
 
-def main():
-    group = CyclicGroup(10)
-    TTP_key = Key(group)
-    st_vote = "1110111101"
-    vote_product: CipherMessage = CipherMessage(1, 1)
-    for i in range(10):
-        vote = int(st_vote[i])
-        vote_product = multi_vote_encryption(group, vote, vote_product, TTP_key.p_key)
-        print("p_key product=", vote_product.ciphertext, ", ciphertext product=", vote_product.ciphertext)
-    res = multi_vote_decryption(group, vote_product, TTP_key.s_key, 10)
-    print(res, " people voted for")
+# def main():
+#     group = CyclicGroup(10)
+#     TTP_key = Key(group)
+#     st_vote = "1110111101"
+#     vote_product: CipherMessage = CipherMessage(1, 1)
+#     for i in range(10):
+#         vote = int(st_vote[i])
+#         vote_product = multi_vote_encryption(group, vote, vote_product, TTP_key.p_key)
+#         print("p_key product=", vote_product.ciphertext, ", ciphertext product=", vote_product.ciphertext)
+#     res = multi_vote_decryption(group, vote_product, TTP_key.s_key, 10)
+#     print(res, " people voted for")
 
 
 if __name__ == "__main__":

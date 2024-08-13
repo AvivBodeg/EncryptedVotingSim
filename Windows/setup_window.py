@@ -1,8 +1,9 @@
 import PySimpleGUI as sg
-from Objects.VoteSettings import VoteSettings
+
+from Objects.vote_settings import VoteSettings
 
 
-def create_window_intro():
+def create_setup_window():
     width, height = sg.Window.get_screen_size()
     layout_intro = [
         [sg.Push(), sg.Text("Enter question: "), sg.Push()],

@@ -1,8 +1,8 @@
 import PySimpleGUI as sg
-from Objects.QuestionInfo import QuestionInfo
+from Objects.question_info import QuestionInfo
 
 
-def create_window_end(question_info: QuestionInfo, sum_opt1, sum_opt2):
+def create_results_window(question_info: QuestionInfo, sum_opt1, sum_opt2):
     winner = question_info.opt1 if sum_opt1 >= sum_opt2 else question_info.opt2
     layout = [
         [sg.Push(), sg.Text(question_info.question), sg.Push()],

@@ -1,13 +1,13 @@
 import PySimpleGUI as sg
 
 
-def create_window_intermission(current_voter, ciphertext):
+def create_intermission_window(current_voter, ciphertext):
     layout = [
         [sg.Push(), sg.Text("Encrypted vote: " + ciphertext), sg.Push()],
         [sg.Push(), sg.Button("Next"), sg.Push()]
     ]
 
-    window = sg.Window("Voter " + str(current_voter), layout)
+    window = sg.Window("Voter #" + str(current_voter), layout)
     event, values = window.read()
 
     if event == "Next":
