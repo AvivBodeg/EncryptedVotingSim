@@ -9,5 +9,5 @@ def _gen_key(cyclic_group):
 
 class Key:
     def __init__(self, cyclic_group: CyclicGroup):
-        self.s_key = _gen_key(cyclic_group)  # secret key
-        self.p_key = pow(cyclic_group.generator, self.s_key, mod=cyclic_group.mod)  # public key
+        self.s_key = _gen_key(cyclic_group)
+        self.p_key = pow(cyclic_group.generator, self.s_key, mod=cyclic_group.mod)
