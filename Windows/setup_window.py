@@ -3,6 +3,11 @@ import PySimpleGUI as sg
 from Objects.vote_settings import VoteSettings
 
 
+def check_fields(values):
+    return (bool(values["-NUM_VOTERS-"].strip()) and bool(values["-OPTION_1-"].strip()) and
+            bool(values["-OPTION_2-"].strip()) and bool(values["-QUESTION-"].strip()))
+
+
 def create_setup_window():
     layout_intro = [
         [sg.Push(), sg.Text("Enter question: ", font=("Helvetica", 18)), sg.Push()],
@@ -24,7 +29,7 @@ def create_setup_window():
 
         if event == sg.WIN_CLOSED:
             window.close()
-            return -1, None # status, obj
+            return -1, None  # status, obj
 
         if event == '-NUM_VOTERS-':
             input_value = values['-NUM_VOTERS-']
@@ -35,12 +40,12 @@ def create_setup_window():
                 # If the input is not a valid integer, revert to the previous value
                 window['-NUM_VOTERS-'].update(input_value[:-1])
 
-        elif event == "START" and values['-NUM_VOTERS-'] != "":
-            if int(values['-NUM_VOTERS-']) > 0:
+        elif event == "START" and check_fields(values):
+            if int(values["-NUM_VOTERS-"]) > 0:
                 question = values["-QUESTION-"] if values["-QUESTION-"] != "" else "Question?"
                 num_voters = int(values["-NUM_VOTERS-"])
                 option1 = values["-OPTION_1-"] if values["-OPTION_1-"] != "" else "Option 1"
                 option2 = values["-OPTION_2-"] if values["-OPTION_2-"] != "" else "Option 2"
                 # auto = values["-AUTO-"]
                 window.close()
-                return 0, VoteSettings(question, option1, option2, num_voters) # status, obj
+                return 0, VoteSettings(question, option1, option2, num_voters)  # status, obj
