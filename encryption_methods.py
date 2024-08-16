@@ -36,22 +36,3 @@ def find_voting_result(cyclic_group: CyclicGroup, num_voters, result_as_power):
         if pow(cyclic_group.generator, i, mod=cyclic_group.mod) == result_as_power:
             return i
     return -1
-
-
-# def main():
-#     group = CyclicGroup(10)
-#     TTP_key = Key(group)
-#     st_vote = "1110111101"
-#     vote_product: CipherMessage = CipherMessage(1, 1)
-#     for i in range(10):
-#         vote = int(st_vote[i])
-#         self_key = Key(group)
-#         e_vote = encrypt(group, vote, TTP_key.p_key, self_key)
-#         vote_product = multi_vote_encryption(group, vote_product, e_vote)
-#         print("p_key product=", vote_product.ciphertext, ", ciphertext product=", vote_product.ciphertext)
-#     res = multi_vote_decryption(group, vote_product, TTP_key.s_key, 10)
-#     print(res, " people voted for")
-#
-#
-# if __name__ == "__main__":
-#     main()

@@ -18,7 +18,7 @@ def create_winner_window(question_info: QuestionInfo, opt1_votes, opt2_votes):
         [sg.Push(), sg.Text(str(opt2_votes) + " people voted for " + question_info.opt2, font=("Helvetica", 18)),
          sg.Push()],
         [sg.Push(), sg.Text(" ")],
-        [sg.Push(), sg.Text("The people chose " + winning_opt, font=("Helvetica", 22), text_color="yellow"), sg.Push()],
+        [sg.Push(), sg.Text("The people chose " + winning_opt + "!", font=("Helvetica", 22), text_color="yellow"), sg.Push()],
         [sg.Push(), sg.Button("Done", font=("Helvetica", 18)), sg.Push()]
     ]
     window = sg.Window("Results", layout)

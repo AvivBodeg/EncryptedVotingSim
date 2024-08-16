@@ -21,7 +21,3 @@ def create_dot_product_window(dot_product_message: CipherMessage):
     elif event == sg.WIN_CLOSED:
         window.close()
         return -1
-
-
-# c = CipherMessage(12112, 1217821)
-# create_dot_product_window(c)
