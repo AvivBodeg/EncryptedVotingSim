@@ -1,5 +1,5 @@
-- redo results_window from scratch
-- add page to show encrypted message dot product
-- add public key to voting window
+V- redo results_window from scratch
+V- add page to show encrypted message dot product
+V- add public key to voting window
 - connect back-end and front-end (pending)
-- setup_window check that number of voters is an int and is positive 
+V- setup_window check that number of voters is an int and is positive

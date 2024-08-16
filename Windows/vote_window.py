@@ -12,16 +12,15 @@ def create_vote_window(question_info: QuestionInfo, current_voter, p_key):
          sg.Text(" ", font=("Helvetica", 18)),
          sg.Button(question_info.opt2, font=("Helvetica", 18)), sg.Push()]
     ]
-    window_voting = sg.Window("Voter #" + str(current_voter), layout_voting)
-    event, values = window_voting.read()
+    window = sg.Window("Voter #" + str(current_voter), layout_voting)
+    event, values = window.read()
 
     if event == question_info.opt1:
-        window_voting.close()
+        window.close()
         return 1
     elif event == question_info.opt2:
-        window_voting.close()
+        window.close()
         return 0
     elif event == sg.WIN_CLOSED:
-        window_voting.close()
+        window.close()
         return -1
-
