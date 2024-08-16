@@ -3,10 +3,10 @@ import PySimpleGUI as sg
 from Objects.question_info import QuestionInfo
 
 
-def create_vote_window(question_info: QuestionInfo, current_voter):
+def create_vote_window(question_info: QuestionInfo, current_voter, p_key):
     layout_voting = [
         [sg.Push(), sg.Text(question_info.question, font=("Helvetica", 20)), sg.Push()],
-        [sg.Push(), sg.Text(" ", font=("Helvetica", 20)), sg.Push()],
+        [sg.Text("(your public key is " + str(p_key) + ")", font=("Helvetica", 14))],
         [sg.Push(), sg.Text(" ", font=("Helvetica", 20)), sg.Push()],
         [sg.Push(), sg.Button(question_info.opt1, font=("Helvetica", 18)),
          sg.Text(" ", font=("Helvetica", 18)),
@@ -24,3 +24,4 @@ def create_vote_window(question_info: QuestionInfo, current_voter):
     elif event == sg.WIN_CLOSED:
         window_voting.close()
         return -1
+
