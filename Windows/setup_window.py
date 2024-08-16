@@ -24,7 +24,7 @@ def create_setup_window():
 
         if event == sg.WIN_CLOSED:
             window.close()
-            return -1
+            return -1, None # status, obj
 
         if event == '-NUM_VOTERS-':
             input_value = values['-NUM_VOTERS-']
@@ -43,4 +43,4 @@ def create_setup_window():
                 option2 = values["-OPTION_2-"] if values["-OPTION_2-"] != "" else "Option 2"
                 # auto = values["-AUTO-"]
                 window.close()
-                return VoteSettings(question, option1, option2, num_voters)
+                return 0, VoteSettings(question, option1, option2, num_voters) # status, obj

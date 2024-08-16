@@ -23,5 +23,5 @@ def create_dot_product_window(dot_product_message: CipherMessage):
         return -1
 
 
-c = CipherMessage(12112, 1217821)
-create_dot_product_window(c)
+# c = CipherMessage(12112, 1217821)
+# create_dot_product_window(c)
