@@ -36,10 +36,11 @@ def create_setup_window():
                 window['-NUM_VOTERS-'].update(input_value[:-1])
 
         elif event == "START" and values['-NUM_VOTERS-'] != "":
-            question = values["-QUESTION-"] if values["-QUESTION-"] != "" else "Question?"
-            num_voters = int(values["-NUM_VOTERS-"])
-            option1 = values["-OPTION_1-"] if values["-OPTION_1-"] != "" else "Option 1"
-            option2 = values["-OPTION_2-"] if values["-OPTION_2-"] != "" else "Option 2"
-            # auto = values["-AUTO-"]
-            window.close()
-            return VoteSettings(question, option1, option2, num_voters)
+            if int(values['-NUM_VOTERS-']) > 0:
+                question = values["-QUESTION-"] if values["-QUESTION-"] != "" else "Question?"
+                num_voters = int(values["-NUM_VOTERS-"])
+                option1 = values["-OPTION_1-"] if values["-OPTION_1-"] != "" else "Option 1"
+                option2 = values["-OPTION_2-"] if values["-OPTION_2-"] != "" else "Option 2"
+                # auto = values["-AUTO-"]
+                window.close()
+                return VoteSettings(question, option1, option2, num_voters)
