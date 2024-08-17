@@ -51,6 +51,7 @@ The encryption process involves the following steps:
 ## Project Structure
 ```
 EncryptedVotingSim/
+├── README.md
 ├── Objects/
 │   ├── cipher_message.py
 │   ├── cyclic_group.py
@@ -65,6 +66,5 @@ EncryptedVotingSim/
 │   └── vote_window.py
 ├── automatic_voting.py
 ├── encryption_methods.py
-├── main.py
-└── README.md
+└── main.py
 ```
