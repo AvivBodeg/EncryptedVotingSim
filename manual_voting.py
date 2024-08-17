@@ -6,7 +6,7 @@ from Objects.cipher_message import CipherMessage
 from Objects.key import Key
 
 
-def main():
+def manual_voting():
     status, vote_settings = setup_window.create_setup_window()
     if status == -1 or vote_settings is None:
         exit("Error: someone existed the program during setup_window")
@@ -47,5 +47,4 @@ def main():
     results_window.create_results_window(vote_settings.question_information, opt1_votes, opt2_votes)
 
 
-if __name__ == "__main__":
-    main()
+manual_voting()

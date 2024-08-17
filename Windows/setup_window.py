@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-
 from Objects.vote_settings import VoteSettings
 
 
@@ -10,7 +9,7 @@ def check_fields(values):
 
 
 def create_setup_window():
-    layout_intro = [
+    layout = [
         [sg.Push(), sg.Text("Enter question: ", font=("Helvetica", 18)), sg.Push()],
         [sg.Push(),
          sg.Multiline(default_text="Choose your favorite food", k="-QUESTION-", font=("Helvetica", 18), size=(35, 3),
@@ -24,7 +23,7 @@ def create_setup_window():
         [sg.Push(), sg.Button("START", font=("Helvetica", 18), expand_x=True), sg.Push()]
     ]
 
-    window = sg.Window("Project v1.0", layout_intro)
+    window = sg.Window("Manual Voting v1.0", layout)
 
     while True:
         event, values = window.read()
