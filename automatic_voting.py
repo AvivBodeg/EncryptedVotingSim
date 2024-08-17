@@ -71,7 +71,7 @@ def automatic_voting():
                                                                  num_voters)
 
     f = open(f_name, "a")
-    f.write(f"encrypted dot product= ({encrypted_dot_product.p_key},{encrypted_dot_product.ciphertext})\n")
+    f.write(f"encrypted dot product(k,c)= ({encrypted_dot_product.p_key},{encrypted_dot_product.ciphertext})\n")
     f.write(f"votes for opt1: {actual_opt1_votes}, expected votes for opt1: {opt1_votes}\n")
 
 
