@@ -5,21 +5,24 @@ from Objects.vote_settings import VoteSettings
 
 def check_fields(values):
     return (bool(values["-NUM_VOTERS-"].strip()) and bool(values["-OPTION_1-"].strip()) and
-            bool(values["-OPTION_2-"].strip()) and bool(values["-QUESTION-"].strip()))
+            bool(values["-OPTION_2-"].strip()) and bool(values["-QUESTION-"].strip()) and
+            bool(values["-OPTION_1-"] != values["-OPTION_2-"]))
 
 
 def create_setup_window():
     layout_intro = [
         [sg.Push(), sg.Text("Enter question: ", font=("Helvetica", 18)), sg.Push()],
-        [sg.Push(), sg.Multiline(k="-QUESTION-", font=("Helvetica", 18), size=(35, 3), no_scrollbar=True), sg.Push()],
+        [sg.Push(),
+         sg.Multiline(default_text="Choose your favorite food", k="-QUESTION-", font=("Helvetica", 18), size=(35, 3),
+                      no_scrollbar=True), sg.Push()],
         [sg.Text("Option 1:", font=("Helvetica", 18)),
-         sg.InputText(k="-OPTION_1-", font=("Helvetica", 18), size=(18, 1)), sg.Push()],
+         sg.InputText(default_text="Pizza", k="-OPTION_1-", font=("Helvetica", 18), size=(18, 1)), sg.Push()],
         [sg.Text("Option 2:", font=("Helvetica", 18)),
-         sg.InputText(k="-OPTION_2-", font=("Helvetica", 18), size=(18, 1)), sg.Push()],
+         sg.InputText(default_text="Pasta", k="-OPTION_2-", font=("Helvetica", 18), size=(18, 1)), sg.Push()],
         [sg.Text("Number of Voters: ", font=("Helvetica", 18)),
          sg.Input(key='-NUM_VOTERS-', font=("Helvetica", 20), enable_events=True, size=(10, 1))],
         [sg.Push(), sg.Button("START", font=("Helvetica", 18), expand_x=True), sg.Push()]
-        # [sg.Push(), sg.Checkbox("Auto mode?", k="-AUTO-")]
+        , [sg.Push(), sg.Checkbox("Auto mode?", k="-AUTO-")]
     ]
 
     window = sg.Window("Project", layout_intro)
