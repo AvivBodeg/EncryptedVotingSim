@@ -15,9 +15,14 @@ In the digital age, ensuring the integrity and privacy of votes in an online vot
 ## Features
 
 •	Secure Voting: Utilizes ElGamal encryption to ensure that votes are confidential.
+
 •	Two-Choice Voting: Simulates a voting system where voters can choose between two options.
-•	End-to-End Encryption: Demonstrates the complete process from encryption to decryption in a secure environment.
-•	Python Implementation: The project is implemented entirely in Python, making it easy to understand and extend.
+
+•	End-to-End Encryption: Demonstrates the complete process from encryption to decryption.
+
+•	Automatic mode: Simulates a large amount of votes with minimal input (total amount of votes and how many voted for one of the options).
+
+•	Python Implementation: The project is implemented entirely in Python, making it easy to understand.
 
 ## ElGamal Encryption
 
