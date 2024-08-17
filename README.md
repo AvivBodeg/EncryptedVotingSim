@@ -31,7 +31,7 @@ In the digital age, ensuring the integrity and privacy of votes in an online vot
 
 ## Usage
 
-•	For manual voting run the `main.py` file
+•	For manual voting run the `manual_voting.py` file
 
 •	For an automatic simulation run the `automatic_vote.py` file
 
@@ -64,7 +64,7 @@ EncryptedVotingSim/
 │   ├── results_window.py
 │   ├── setup_window.py
 │   └── vote_window.py
-├── automatic_voting.py
 ├── encryption_methods.py
-└── main.py
+├── automatic_voting.py
+└── manual_voting.py
 ```
