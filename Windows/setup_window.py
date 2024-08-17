@@ -22,7 +22,7 @@ def create_setup_window():
         [sg.Text("Number of Voters: ", font=("Helvetica", 18)),
          sg.Input(key='-NUM_VOTERS-', font=("Helvetica", 20), enable_events=True, size=(10, 1))],
         [sg.Push(), sg.Button("START", font=("Helvetica", 18), expand_x=True), sg.Push()]
-        , [sg.Push(), sg.Checkbox("Auto mode?", k="-AUTO-")]
+        #, [sg.Push(), sg.Checkbox("Auto mode?", k="-AUTO-")]
     ]
 
     window = sg.Window("Project", layout_intro)
