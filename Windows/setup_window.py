@@ -22,10 +22,9 @@ def create_setup_window():
         [sg.Text("Number of Voters: ", font=("Helvetica", 18)),
          sg.Input(key='-NUM_VOTERS-', font=("Helvetica", 20), enable_events=True, size=(10, 1))],
         [sg.Push(), sg.Button("START", font=("Helvetica", 18), expand_x=True), sg.Push()]
-        #, [sg.Push(), sg.Checkbox("Auto mode?", k="-AUTO-")]
     ]
 
-    window = sg.Window("Project", layout_intro)
+    window = sg.Window("Project v1.0", layout_intro)
 
     while True:
         event, values = window.read()
@@ -49,6 +48,5 @@ def create_setup_window():
                 num_voters = int(values["-NUM_VOTERS-"])
                 option1 = values["-OPTION_1-"] if values["-OPTION_1-"] != "" else "Option 1"
                 option2 = values["-OPTION_2-"] if values["-OPTION_2-"] != "" else "Option 2"
-                # auto = values["-AUTO-"]
                 window.close()
                 return 0, VoteSettings(question, option1, option2, num_voters)  # status, obj
