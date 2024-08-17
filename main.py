@@ -36,6 +36,7 @@ def main():
     if status == -1:
         exit("Error: someone existed the program during dot_product_window")
 
+    # decryption
     opt1_votes = encryption_methods.multi_vote_decryption(c_group, encrypted_dot_product, TTP_key.s_key,
                                                           vote_settings.num_voters)
     if opt1_votes == -1 or opt1_votes > vote_settings.num_voters:
