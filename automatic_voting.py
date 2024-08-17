@@ -21,9 +21,9 @@ def input_vote_amounts():
     while not num_voters.isdigit() or int(num_voters) < 1:
         num_voters = input("enter a valid number (positive int)")
     num_voters = int(num_voters)
-    opt1_votes = input("How many votes for opt1?")
+    opt1_votes = input("How many votes for option 1?")
     while not opt1_votes.isdigit() or int(opt1_votes) > num_voters:
-        opt1_votes = input(f"enter a valid number (int between 1 and {num_voters})")
+        opt1_votes = input(f"enter a valid number (int between 0 and {num_voters})")
 
     opt1_votes = int(opt1_votes)
     return num_voters, opt1_votes
@@ -72,7 +72,7 @@ def automatic_voting():
 
     f = open(f_name, "a")
     f.write(f"encrypted dot product(k,c)= ({encrypted_dot_product.p_key},{encrypted_dot_product.ciphertext})\n")
-    f.write(f"votes for opt1: {actual_opt1_votes}, expected votes for opt1: {opt1_votes}\n")
+    f.write(f"found {actual_opt1_votes} votes for option 1, expected: {opt1_votes}\n")
 
 
 automatic_voting()
