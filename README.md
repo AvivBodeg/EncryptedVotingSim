@@ -8,6 +8,7 @@ EncryptedVotingSim is a simulation of a two-choice online voting system using El
 - [Features](#features)
 - [Usage](#usage)
 - [ElGamal Encryption](#elgamal-encryption)
+- [Project Structure](#project-structure)
 
 
 ## Introduction
@@ -46,20 +47,24 @@ The encryption process involves the following steps:
 2.	**Encryption:** The voter’s choice is encrypted using the public key.
 3.	**Decryption:** After the voting process, the votes are decrypted using the private key to reveal the final tally.
 
+
+## Project Structure
 ```
 EncryptedVotingSim/
 ├── README.md
-├── .gitignore
-├── requirements.txt
-├── setup.py
-├── src/
-│   ├── init.py
-│   ├── main.py
-│   ├── encryption.py
-│   └── voting.py
-├── tests/
-│   ├── init.py
-│   └── test_voting.py
-└── docs/
-└── design.md
+├── Objects/
+│   ├── cipher_message.py
+│   ├── cyclic_group.py
+│   ├── key.py
+│   ├── question_info.py
+│   └── vote_settings.py
+├── Windows/
+│   ├── dot_product_window.py
+│   ├── intermission_window.py
+│   ├── results_window.py
+│   ├── setup_window.py
+│   └── vote_window.py
+├── automatic_voting.py
+├── encryption_methods.py
+└── main.py
 ```
