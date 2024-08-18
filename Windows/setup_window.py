@@ -35,7 +35,7 @@ def create_setup_window():
         if event == '-NUM_VOTERS-':
             input_value = values['-NUM_VOTERS-']
 
-            # Allow only integer input: digits and a leading negative sign
+            # Allow only integer input: digits a
             if input_value and not (
                     input_value.isdigit() or (input_value.startswith('-') and input_value[1:].isdigit())):
                 # If the input is not a valid integer, revert to the previous value
