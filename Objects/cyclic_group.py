@@ -2,7 +2,7 @@ import sympy
 
 
 class CyclicGroup:
-    SIZE_MULTIPLIER = 10000
+    SIZE_MULTIPLIER = 1000000
 
     def __init__(self, n: int):
         self.__n = n

@@ -16,6 +16,7 @@ def manual_voting():
 
     TTP_key = Key(c_group)
     encrypted_dot_product = CipherMessage(1, 1)
+    vote_validation = 0
 
     # Voting:
     for i in range(1, vote_settings.num_voters + 1):
@@ -24,6 +25,7 @@ def manual_voting():
         if vote is None or vote == -1:
             exit("Error: someone existed the program during vote_window")
 
+        vote_validation += vote
         # encryption:
         encrypted_vote = encryption_methods.encrypt(c_group, vote, TTP_key.p_key, cur_voter_key)
         encrypted_dot_product = encryption_methods.multi_vote_encryption(c_group, encrypted_dot_product, encrypted_vote)
@@ -39,11 +41,11 @@ def manual_voting():
     # decryption
     opt1_votes = encryption_methods.multi_vote_decryption(c_group, encrypted_dot_product, TTP_key.s_key,
                                                           vote_settings.num_voters)
-    if opt1_votes == -1 or opt1_votes > vote_settings.num_voters:
+    if opt1_votes == -1 or opt1_votes > vote_settings.num_voters or opt1_votes != vote_validation:
+        print(f"expected votes for opt1:{vote_validation}, found:{opt1_votes}")
         exit("Error: decryption failed")
 
     opt2_votes = vote_settings.num_voters - opt1_votes
-
     results_window.create_results_window(vote_settings.question_information, opt1_votes, opt2_votes)
 
 
