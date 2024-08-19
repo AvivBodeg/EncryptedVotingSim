@@ -6,6 +6,7 @@ EncryptedVotingSim is a simulation of a two-choice online voting system using El
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
+- [Installation](#installation)
 - [Usage](#usage)
 - [ElGamal Encryption](#elgamal-encryption)
 - [Project Structure](#project-structure)
@@ -27,6 +28,15 @@ In the digital age, ensuring the integrity and privacy of votes in an online vot
 •	Automatic mode: Simulates a large amount of votes with minimal input (total amount of votes and how many voted for one of the options).
 
 •	Python Implementation: The project is implemented entirely in Python, making it easy to understand.
+
+
+## Installation
+
+Clone the repositor by running ```git clone https://github.com/your-username/EncryptedVotingSim.git```.
+
+Install the required Python packages using ```pip3 install -r requirements.txt```.
+
+Run ```python3 manual_voting.py``` or ```python3 automatic_voting.py``` to try one of the simulations.
 
 
 ## Usage
