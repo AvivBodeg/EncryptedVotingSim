@@ -1,4 +1,3 @@
-from config import PySimpleGUI_License
 import PySimpleGUI as sg
 from Objects.question_info import QuestionInfo
 
