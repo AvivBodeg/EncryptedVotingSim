@@ -13,12 +13,11 @@ def multi_vote_encryption(cyclic_group: CyclicGroup, encrypted_voting_product: C
     return new_voting_product
 
 
-def encrypt(cyclic_group: CyclicGroup, vote, TTP_key: Key, self_key: Key):
+def encrypt(cyclic_group: CyclicGroup, vote, public_TTP_key, voter_key: Key):
     """ Encrypts the vote as a power of cyclic_group.generator using ElGamal encryption method"""
-    key = self_key  # Key(cyclic_group)
-    h = pow(TTP_key, key.s_key, mod=cyclic_group.mod)
+    h = pow(public_TTP_key, voter_key.s_key, mod=cyclic_group.mod)
     ciphertext = (pow(cyclic_group.generator, vote) * h) % cyclic_group.mod
-    cipher_message: CipherMessage = CipherMessage(key.p_key, ciphertext)
+    cipher_message: CipherMessage = CipherMessage(voter_key.p_key, ciphertext)
     return cipher_message
 
 
