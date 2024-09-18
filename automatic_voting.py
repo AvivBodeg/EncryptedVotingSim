@@ -52,11 +52,12 @@ def voting(c_group: CyclicGroup, num_voters: int, opt1_votes: int, f_name, TTP_k
 
 def automatic_voting():
     num_voters, opt1_votes = input_vote_amounts()
+    print("creating Cyclic group...")
     c_group = CyclicGroup(num_voters)
 
     f_name = create_file_name()
     # create file and add header
-    print(f"creating file named {f_name}")
+    print(f"creating file named {f_name}...")
     f = open(f_name, "x")
     f.write("Amount of voters: " + str(num_voters) + "\n")
     f.write("version 1.0\n")
@@ -64,6 +65,7 @@ def automatic_voting():
 
     # encryption
     TTP_key = Key(c_group)
+    print("simulating votes...")
     encrypted_dot_product = voting(c_group, num_voters, opt1_votes, f_name, TTP_key.p_key)
 
     # decryption
@@ -73,6 +75,8 @@ def automatic_voting():
     f = open(f_name, "a")
     f.write(f"encrypted dot product(k,c)= ({encrypted_dot_product.p_key},{encrypted_dot_product.ciphertext})\n")
     f.write(f"found {actual_opt1_votes} votes for option 1, expected: {opt1_votes}\n")
+    f.close()
+    print("completed")
 
 
 automatic_voting()

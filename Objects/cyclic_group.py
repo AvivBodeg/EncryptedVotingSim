@@ -2,7 +2,8 @@ import sympy
 
 
 class CyclicGroup:
-    SIZE_MULTIPLIER = 1000000
+    # set power between 20 and 24?
+    SIZE_MULTIPLIER = pow(2, 23)
 
     def __init__(self, n: int):
         self.__n = n
