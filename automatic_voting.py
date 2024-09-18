@@ -59,8 +59,9 @@ def automatic_voting():
     # create file and add header
     print(f"creating file named {f_name}...")
     f = open(f_name, "x")
-    f.write("Amount of voters: " + str(num_voters) + "\n")
     f.write("version 1.0\n")
+    f.write("Amount of voters: " + str(num_voters) + "\n")
+    f.write("Cyclic group modulo: " + str(c_group.mod) + ", element count: " + str(c_group.p) + "\n")
     f.close()
 
     # encryption
